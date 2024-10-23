@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <h2>Events</h2>
+            <ul class="events">
+                <li>Event 1: 10/20 - 10/22</li>
+                <li>Event 2: 11/02 - 11/05</li>
+                <li>Event 3: 12/01 - 12/03</li>
+            </ul>
+
+            <h2>Contacts</h2>
+            <ul class="contacts">
+                <li>John Doe - 1 day ago</li>
+                <li>Jane Smith - 3 days ago</li>
+                <li><button class="add-btn" id="addContactBtn">+ New Contact</button></li>
+            </ul>
+
+            <h2>Projects</h2>
+            <ul class="projects">
+                <li>Project 1: Ongoing</li>
+                <li>Project 2: Ongoing</li>
+                <li><button class="add-btn" id="addProjectBtn">+ New Project</button></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Section -->
+        <section class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <button class="create-btn">+ Create</button>
+            </div>
+
+            <!-- Newsfeed Section -->
+            <div class="newsfeed">
+                <h2>Newsfeed</h2>
+                <div class="news-item">
+                    <h3>Demo Sports Coach User</h3>
+                    <p>Posted about cricket session: 100 people attended.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Sport4Kids Admin</h3>
+                    <p>Shared Story: "Working on the Birmingham Project".</p>
+                </div>
+            </div>
+
+            <!-- Boards Section -->
+            <div class="boards">
+                <h2>Boards</h2>
+                <ul class="board-list">
+                    <li>Board 1: Attendance Record</li>
+                    <li>Board 2: Outcome Stats</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Right Sidebar - Progress and Tasks -->
+        <aside class="progress-sidebar">
+            <h2>Personal Progress</h2>
+            <ul class="progress-list">
+                <li>Feeling lonely</li>
+                <li>I got stomach ache/cramps</li>
+                <li>Had horrible dreams</li>
+                <li>I feel cold</li>
+            </ul>
+
+            <!-- Progress bars -->
+            <div class="progress-bar">
+                <div class="progress green" style="width: 75%;"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress green" style="width: 50%;"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress green" style="width: 20%;"></div>
+            </div>
+
+            <h2>Tasks</h2>
+            <ul class="tasks-list">
+                <li>Task 1: Call colleague about meeting</li>
+                <li>Task 2: Submit voucher for rent fees</li>
+                <li>Task 3: Preparing deadline for IT report</li>
+                <li><button class="add-btn" id="addTaskBtn">+ Add Task</button></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Modal for New Contact -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeContact">&times;</span>
+            <h2>Add New Contact</h2>
+            <form>
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" name="contactName"><br><br>
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail"><br><br>
+                <button type="submit">Add Contact</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for New Project -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeProject">&times;</span>
+            <h2>Add New Project</h2>
+            <form>
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName"><br><br>
+                <label for="projectDesc">Project Description:</label>
+                <textarea id="projectDesc" name="projectDesc"></textarea><br><br>
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for New Task -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeTask">&times;</span>
+            <h2>Add New Task</h2>
+            <form>
+                <label for="taskName">Task:</label>
+                <input type="text" id="taskName" name="taskName"><br><br>
+                <label for="taskDesc">Description:</label>
+                <textarea id="taskDesc" name="taskDesc"></textarea><br><br>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
