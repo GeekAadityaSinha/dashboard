@@ -21,24 +21,24 @@ body {
 }
 
 /* Sidebar Styling */
-.sidebar {
+.sidebar, .progress-sidebar {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar h2 {
+.sidebar h2, .progress-sidebar h2 {
     margin-bottom: 15px;
     font-size: 18px;
 }
 
-.sidebar ul {
+.sidebar ul, .progress-list {
     list-style: none;
     padding-left: 0;
 }
 
-.sidebar li {
+.sidebar li, .progress-list li {
     padding: 10px 0;
     font-size: 14px;
     display: flex;
@@ -68,9 +68,7 @@ body {
 }
 
 /* Red Buttons Styling */
-
-/* For Create Button */
-.create-btn {
+.create-btn, .add-btn {
     background-color: #e74c3c; /* Red */
     color: white;
     padding: 5px 15px;
@@ -79,21 +77,7 @@ body {
     cursor: pointer;
 }
 
-.create-btn:hover {
-    background-color: #c0392b; /* Darker Red */
-}
-
-/* For Add Button */
-.add-btn {
-    background-color: #e74c3c; /* Red */
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add-btn:hover {
+.create-btn:hover, .add-btn:hover {
     background-color: #c0392b; /* Darker Red */
 }
 
@@ -138,47 +122,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.progress-sidebar h2 {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.progress-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.progress-list li {
-    padding: 10px 0;
-    font-size: 14px;
-}
-
-.progress-bar {
-    background-color: #e0e0e0;
-    height: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.progress {
-    height: 100%;
-    border-radius: 5px;
-}
-
-.green {
-    background-color: #2ecc71;
-}
-
-.tasks-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.tasks-list li {
-    padding: 10px 0;
-    font-size: 14px;
-}
-
 /* Modal styling */
 .modal {
     display: none;
@@ -212,4 +155,34 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+    
+    .modal-content {
+        width: 90%; /* Increase modal width on smaller screens */
+    }
+
+    .main-content .header {
+        flex-direction: column; /* Stack elements on small screens */
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar, .progress-sidebar, .main-content {
+        padding: 15px; /* Less padding for smaller screens */
+    }
+
+    .sidebar h2, .progress-sidebar h2 {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .news-item, .board-list li {
+        padding: 10px; /* Reduce padding */
+    }
 }
